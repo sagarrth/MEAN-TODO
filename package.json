@@ -1,0 +1,31 @@
+{
+  "name": "mean-todo",
+  "version": "1.0.0",
+  "description": "An application developed while learning MEAN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SagarRouth/MEAN-TODO.git"
+  },
+  "keywords": [
+    "TODO",
+    "MEAN"
+  ],
+  "author": "Sagar Routh <sagarrouth0512@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SagarRouth/MEAN-TODO/issues"
+  },
+  "homepage": "https://github.com/SagarRouth/MEAN-TODO#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.8.0",
+    "nodemon": "^1.11.0"
+  }
+}
