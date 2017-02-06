@@ -6,6 +6,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
+
 //open a connection to Mongo DB
 mongoose.connect("mongodb://localhost:27017/MEAN-TODO");
 
@@ -16,6 +17,10 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
 app.use(methodOverride());
+
+require(__dirname+'/models/todoModel');
+const route = require('./controller/todoController.js');
+route.todoController(app);
 
 //start server and listen on port 8080
 app.listen(8080, ()=>{console.log('server started');});
