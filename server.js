@@ -18,9 +18,15 @@ app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
+//load the model in memory
 require(__dirname+'/models/todoModel');
 const route = require('./controller/todoController.js');
 route.todoController(app);
+
+//default route to load index.html
+app.get('*', (req, res)=>{
+  res.sendFile(__dirname+'/public/index.html');
+});
 
 //start server and listen on port 8080
 app.listen(8080, ()=>{console.log('server started');});
